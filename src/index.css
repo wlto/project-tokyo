@@ -12,7 +12,7 @@
   /* Box shadows */
   --shadow-normal: 0 6px 20px 0 rgba(0, 0, 0, 0.25);
   --shadow-neumorphism-light: -6px -6px 16px 0 rgba(255, 255, 255, 0.55);
-  --shadow-neumorphism-dark: 6px 6px 16px 0 rgba(0, 0, 0, 0.55);
+  --shadow-neumorphism-dark: 6px 6px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
 body {

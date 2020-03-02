@@ -32,8 +32,8 @@ For fun.
 
 ## TODOs
 
-- [ ] Style `NeumorphismButton` component.
-- [ ] Style `FetchedImage` component.
+- [x] Style `NeumorphismButton` component.
+- [x] Style `FetchedImage` component.
 - [ ] Implement functionality to extract dominant colours from the fetched image.
 - [ ] Style `ColourPalette` component.
 

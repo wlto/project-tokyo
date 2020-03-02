@@ -30,10 +30,12 @@ function App() {
   return (
     <div className="App">
       <h1 className="App-title">tokyo</h1>
-      <FetchedImage imageInfo={fetchedImage} />
-      <NeumorphismButton onClickHandler={handleOnClick}>
-        REFRESH
-      </NeumorphismButton>
+      <div className="App-FetchedImage">
+        <FetchedImage imageInfo={fetchedImage} />
+        <NeumorphismButton onClickHandler={handleOnClick}>
+          REFRESH
+        </NeumorphismButton>
+      </div>
       <ColourPalette />
       <p className="App-copyright">made for fun by <span className="App-copyright-author">william to</span></p>
     </div>

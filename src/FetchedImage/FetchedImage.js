@@ -9,7 +9,9 @@ function FetchedImage(props) {
       <div className="FetchedImage-image" style={{
         backgroundImage: `url(${imageInfo.url})`
       }}></div>
-      <p className="FetchedImage-author">by {imageInfo.author} on <a href={imageInfo.unsplashUrl}>Unsplash</a></p>
+      <p className="FetchedImage-author">
+        by <span className="FetchedImage-author-name">{imageInfo.author}</span>&nbsp;on <a href={imageInfo.unsplashUrl}>Unsplash</a>
+      </p>
     </div>
   );
 }
