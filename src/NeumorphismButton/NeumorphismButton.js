@@ -1,9 +1,9 @@
 import React from 'react';
 
 function NeumorphismButton(props) {
-  const { children } = props;
+  const { children, onClickHandler } = props;
   return (
-    <div className="NeumorphismButton">{children}</div>
+    <div className="NeumorphismButton" onClick={onClickHandler}>{children}</div>
   );
 }
 

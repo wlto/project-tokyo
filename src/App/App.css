@@ -1,0 +1,13 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 1rem;
+  background-color: var(--grey);
+}
+
+.App-title {
+  font-family: var(--font-monospace);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
