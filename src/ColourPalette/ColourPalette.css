@@ -1,0 +1,9 @@
+.ColourPalette {
+  padding-top: 2.67rem;
+}
+
+.ColourPalette-title {
+  font-family: var(--font-monospace);
+  font-size: 0.67rem;
+  text-align: center;
+}

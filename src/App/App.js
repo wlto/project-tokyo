@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 // Components
@@ -15,16 +15,26 @@ function App() {
   // State
   const [fetchedImage, setFetchedImage] = useState({});
 
-  const handleOnClick = async (event) => {
+  const fetchImage = async () => {
+    const randomIndex = parseInt(Math.random() * 10);
     const response = await fetch(unsplashAPIEndpoint);
     const body = await response.json();
-    const fetchedResult = body.results[0];
+    const fetchedResult = body.results[randomIndex];
 
     setFetchedImage({
       url: fetchedResult.urls.regular,
       author: fetchedResult.user.name,
       unsplashUrl: fetchedResult.links.html
     });
+  }
+
+  // Effects
+  useEffect(() => {
+    fetchImage();
+  }, []);
+
+  const handleOnClick = (event) => {
+    fetchImage();
   }
 
   return (
