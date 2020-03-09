@@ -7,7 +7,7 @@
   /* Colours */
   --black:      #000000;
   --grey:       #dedede;
-  --dark-grey:  #b7b7b7;
+  --dark-grey:  #898989;
 
   /* Box shadows */
   --shadow-normal: 0 6px 20px 0 rgba(0, 0, 0, 0.25);
@@ -15,10 +15,13 @@
   --shadow-neumorphism-dark: 6px 6px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
