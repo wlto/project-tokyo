@@ -4,7 +4,7 @@ import './ColourPalette.css';
 function ColourPalette(props) {
   return (
     <div className="ColourPalette">
-      <h3 className="ColourPalette-title">DONIMANT COLOURS</h3>
+      <h3 className="ColourPalette-title">DOMINANT COLOURS</h3>
       <div className="ColourPalette-colour-container">
         <div className="ColourPalette-colour-box">blue</div>
         <p className="ColourPalette-colour-hex">#0000ff</p>
