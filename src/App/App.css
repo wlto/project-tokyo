@@ -20,11 +20,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2rem;
+}
+
+.App-image-canvas-cl {
+  /* width: 500px;
+  height: 500px; */
+  margin-bottom: 1.94rem;
+  border-radius: 1.11rem;
+  box-shadow: var(--shadow-normal);
 }
 
 .App-copyright {
+  padding-bottom: 0.67rem;
   text-align: center;
   font-family: var(--font-monospace);
   font-size: 0.56rem;
+  color: var(--dark-grey);
+}
+
+.App-copyright-author a,
+.App-copyright-author a:visited {
   color: var(--dark-grey);
 }
