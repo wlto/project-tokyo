@@ -2,7 +2,7 @@
 
 ## About
 
-Project Tokyo is a web application that fetches random photos of Tokyo from people around the world.
+Project Tokyo is a Flutter application that fetches random photos of Tokyo from people around the world.
 
 ## Purpose
 
@@ -19,9 +19,7 @@ For fun.
 
 ## Libraries, services and technologies
 
-- Follows the **JAMStack** development **guidelines**.
-- **Uses React** as a front-end framework with Hooks.
-- **Uses Zeit** to host the website.
+- Use Flutter for development
 
 ## Planning
 
@@ -33,10 +31,6 @@ For fun.
 
 ## TODOs
 
-- [x] Style `NeumorphismButton` component.
-- [x] Style `FetchedImage` component.
-- [ ] Implement functionality to extract dominant colours from the fetched image.
-- [ ] Style `ColourPalette` component.
 
 ## Project Link
 
