@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
 
-class _HeartButtonState extends State<HeartButton> {
-  bool favourited = false;
+class HeartButton extends StatelessWidget {
+  final bool currentPhotoIsSaved;
+  final VoidCallback onHeartTap;
+
+  HeartButton({this.currentPhotoIsSaved, this.onHeartTap});
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: IconButton(
-        color: favourited ? const Color(0xffde728c) : const Color(0xff898989),
+        color: currentPhotoIsSaved ? const Color(0xffde728c) : const Color(0xff898989),
         icon: 
-          favourited 
+          currentPhotoIsSaved
           ? ImageIcon(AssetImage('assets/icons/heart/heart.png'))
           : ImageIcon(AssetImage('assets/icons/heart-outline/heart-outline.png')),
-        onPressed: () {
-          setState(() {
-            favourited = !favourited;
-          });
-        },
+        onPressed: this.onHeartTap,
       ),
     );
   }
-}
-
-class HeartButton extends StatefulWidget {
-  @override
-  _HeartButtonState createState() => _HeartButtonState();
 }

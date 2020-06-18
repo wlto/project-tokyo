@@ -12,12 +12,17 @@ class AnimatedHeading extends StatelessWidget {
       tween: opacityTween,
       duration: Duration(milliseconds: 320), 
       builder: (BuildContext context, double value, Widget child) {
-        return Text(
-          this.text,
-          style: TextStyle(
-            color: const Color(0xff000000).withOpacity(value),
-            fontSize: 36,
-            fontWeight: FontWeight.w700,
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: 24
+          ),
+          child: Text(
+            this.text,
+            style: TextStyle(
+              color: const Color(0xff000000).withOpacity(value),
+              fontSize: 36,
+              fontWeight: FontWeight.w700,
+            )
           )
         );
       }

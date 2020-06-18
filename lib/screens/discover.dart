@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // Custom widgets
 import '../animations/animated_heading.dart';
@@ -15,47 +16,57 @@ class Discover extends StatelessWidget {
       builder: (context, app, child) {
         return Container(
           child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            AnimatedHeading(text: 'Discover Tokyo'),
-            HeroImageCard(imageUrl: app.currentImageUrl),
-            Center(
-              child: Padding(
-                padding: EdgeInsets.only(
-                  top: 8.0,
-                  bottom: 14.0
-                ),
-                child: Text.rich(
-                  TextSpan(
-                    text: 'by ',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: const Color(0xff898989),
-                    ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: app.currentImageOwner,
-                        style: TextStyle(
-                          decoration: TextDecoration.underline,
-                        )
-                      ),
-                      TextSpan(
-                        text: ' on Unplash',
-                      ),
-                      // can add more TextSpans here...
-                    ],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              AnimatedHeading(text: 'Discover Tokyo'),
+              GestureDetector(
+                onTap: () {
+                  launch(app.currentPhoto.link);
+                },
+                child: HeroImageCard(imageUrl: app.currentPhoto.url)
+              ),
+              Center(
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    top: 8.0,
+                    bottom: 14.0
                   ),
-                ),
-              )
-            ),
-            HeartButton(),
-            Flexible(child: Center(child: RefreshButton(onRefreshTap: () {
-              app.updateCurrentImage();
-            },)))
-          ]
-        )
+                  child: Text.rich(
+                    TextSpan(
+                      text: 'by ',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: const Color(0xff898989),
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: app.currentPhoto.owner,
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          )
+                        ),
+                        TextSpan(
+                          text: ' on Unplash',
+                        ),
+                        // can add more TextSpans here...
+                      ],
+                    ),
+                  ),
+                )
+              ),
+              HeartButton(
+                currentPhotoIsSaved: app.currentPhotoIsSaved(),
+                onHeartTap: () {
+                  app.savePhoto();
+                },
+              ),
+              Flexible(child: Center(child: RefreshButton(onRefreshTap: () {
+                app.updateCurrentPhoto();
+              },)))
+            ]
+          )
         );
       }
     );

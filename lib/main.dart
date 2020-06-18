@@ -31,7 +31,7 @@ class App extends StatelessWidget {
                 left: 25,
                 right: 25,
               ),
-              child: _children[app.tabIndex]
+              child: _children[app.tabIndex],
             ),
             bottomNavigationBar: BottomNavigationBar(
               onTap: (index) {
