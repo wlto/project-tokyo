@@ -13,8 +13,6 @@ For fun.
 - Single-page application.
 - See **photos** of Tokyo from Unsplash.
     - [API](https://unsplash.com/documentation#search-photos).
-- See the **top five dominant colours** of each photo.
-  - In progress...
 
 ## Libraries, services and technologies
 
