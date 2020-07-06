@@ -23,6 +23,7 @@ class App extends StatelessWidget {
     return Consumer<AppModel>(
       builder: (context, app, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           home: Scaffold(
             backgroundColor: const Color(0xffdedede),
             body: Container(

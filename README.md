@@ -8,9 +8,12 @@ Project Tokyo is a Flutter application that fetches random photos of Tokyo from 
 
 For fun.
 
+## Demo
+
+![Demo](demo.gif)
+
 ## Features
 
-- Single-page application.
 - See **photos** of Tokyo from Unsplash.
     - [API](https://unsplash.com/documentation#search-photos).
 - See the **top five dominant colours** of each photo.
@@ -28,9 +31,6 @@ For fun.
     - S**etup**: 30 mins.
     - **Development**: 5 hours.
     - **Extra features (CI/CD, GitHub Actions, etc.)**: 4 hours.
-
-## TODOs
-
 
 ## Project Link
 
